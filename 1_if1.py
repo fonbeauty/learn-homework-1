@@ -14,12 +14,33 @@
 
 """
 
+
 def main():
     """
     Эта функция вызывается автоматически при запуске скрипта в консоли
     В ней надо заменить pass на ваш код
     """
-    pass
+
+    def distributing_hat(input_age):
+        age = float(input_age)
+        if age <= 0:
+            return "Возраст не может быть меньше 0 или равен 0"
+        elif 0 < age <= 1:
+            return "Слишком юн для работы"
+        elif 1 < age <= 6:
+            return "В сад"
+        elif 6 < age <= 17:
+            return "В школу"
+        elif 17 < age <= 22:
+            return "В ВУЗ"
+        elif 22 < age <= 65:
+            return "Работать"
+        else:
+            return "Пенсионер"
+
+    user_usage = distributing_hat(input("Введите свой возраст: "))
+    print(user_usage)
+
 
 if __name__ == "__main__":
     main()
